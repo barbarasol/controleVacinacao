@@ -25,4 +25,11 @@ public class Usuario extends Pessoa {
 	}
 	
 	
+	public static void realizarCadastro() {
+		System.out.println("ola");
+	}
+	
+	//public static void agendarVacinacao() {
+		
+	//}
 }
