@@ -2,14 +2,16 @@ package controleVacinacao.executavel;
 
 import java.util.Scanner;
 
-//import javax.swing.JOptionPane;
+import controleVacinacao.classes.Usuario;
 
-//import controleVacinacao.classes.Pessoa;
+//import javax.swing.JOptionPane;
 
 public class Executavel {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		
+		Usuario u1 = new Usuario();
 		
 		do {
 			System.out.println("Escolha uma opção:");
@@ -20,10 +22,10 @@ public class Executavel {
 			int op = scan.nextInt();
 			switch(op) {
 				case 1:
-					//cadastrar();
+					u1.realizarCadastro();
 					break;
 				case 2:
-					
+					//u1.agendarVacinacao();
 					break;
 				case 3:
 					
@@ -31,22 +33,12 @@ public class Executavel {
 				case 4:
 					//exit(1);
 			}
-			
-					
-			
+	
 		}while(true);
 		
+	
 		
-		
-		
-		//Pessoa p1 = new Pessoa();
-		
-		
-		//String nome = JOptionPane.showInputDialog("Qual o nome da pessoa ?");
-		
-		//p1.setNome(nome);
-		
-		//System.out.println(p1);
 	}
+
 
 }
