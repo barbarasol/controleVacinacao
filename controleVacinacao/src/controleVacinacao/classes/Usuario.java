@@ -1,14 +1,13 @@
 package controleVacinacao.classes;
 
-import java.util.Scanner;
-
-import javax.swing.JOptionPane;
 
 public class Usuario extends Pessoa {
 	private String cidade;
 	private int idade;
 	private String telefone;
 	private char sexo;
+	private String email; 
+	
 	
 	public String getEndereco() {
 		return cidade;
@@ -29,32 +28,50 @@ public class Usuario extends Pessoa {
 		this.telefone = telefone;
 	}
 		
-	
 	public char getSexo() {
 		return sexo;
 	}
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	@Override
+	public String toString() {
+		return "Usuario [cidade=" + cidade + ", idade=" + idade + ", telefone=" + telefone + ", sexo=" + sexo
+				+ ", email=" + email + "]";
+	}
 	
 	
-	public static void realizarCadastro() {
-		nome = validaNome();
+	
+	
+	//public static void realizarCadastro() {
+		//nome = validaNome();
 	//	cpf = validaCpf();
 		
-	}
+//	}
 	
-	public static String validaNome() {
-		do {
-			Scanner scan = new Scanner(System.in);
-			System.out.println("Informe o nome:");
-			nome = scan.nextLine();
-			if(nome.equals(null)) {
-				System.out.println("Nome obrigatorio");
-			}
-		}while(nome.equals(null));
-		return nome;
-	}
+	//public static String validaNome() {
+		//do {
+			//Scanner scan = new Scanner(System.in);
+			//System.out.println("Informe o nome:");
+			//nome = scan.nextLine();
+			//if(nome.equals(null)) {
+			//	System.out.println("Nome obrigatorio");
+			//}
+		//}while(nome.equals(null));
+		//return nome;
+	//}
 	/*public static String validaCpf() {
 		do {
 			Scanner scan = new Scanner(System.in);
