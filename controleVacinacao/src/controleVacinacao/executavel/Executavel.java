@@ -4,45 +4,53 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
-
 import controleVacinacao.classes.Usuario;
 
 public class Executavel {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		int i=0;
-		do {
-		
+		do {		
 			System.out.println("Escolha uma opção");
 			System.out.println("1 - Realizar Cadastro");
 			System.out.println("2 - Agendar Vacinação");
 			System.out.println("3 - Consultar dados");
 			System.out.println("4- Sair");
-			int op = scan.nextInt();
+			int op = input.nextInt();
 			List<Usuario> usuarios = new ArrayList<Usuario>();
+			Usuario usuario1 = new Usuario();
 				switch(op) {
-				case 1:
-					String nome = JOptionPane.showInputDialog("Informe o nome:");
-					String idade = JOptionPane.showInputDialog("Qual a idade?");
-					String rg = JOptionPane.showInputDialog("Qual o registro geral?");
-					String cpf = JOptionPane.showInputDialog("Qual o cpf?");
-					
-					
+				case 1:				
 					System.out.println("Informe o nome");
+					usuario1.setNome(input.nextLine());
 					
-
-					Usuario usuario1 = new Usuario();
-					usuario1.setNome(nome);
-					usuario1.setIdade(Integer.valueOf(idade));
-					usuario1.setRg(rg);
-					usuario1.setCpf(cpf);
+					System.out.println("Informe o idade");
+					usuario1.setIdade(input.nextInt());
+					
+					System.out.println("Informe o cpf");
+					usuario1.setCpf(input.nextLine());
+					
+					System.out.println("Informe o rg");
+					usuario1.setRg(input.nextLine());
+					
+					System.out.println("Informe o telefone");
+					usuario1.setTelefone(input.nextLine());
+					
+					System.out.println("Informe o email");
+					usuario1.setEmail(input.nextLine());
+					
+					System.out.println("Informe a cidade");
+					usuario1.setCidade(input.nextLine());
+			
 					
 					usuarios.add(usuario1);
-					for (Usuario usuario : usuarios) {
-						System.out.println(usuario.getNome());	
-					}
+					
+					System.out.println(usuarios);
+					
+				//	for (Usuario usuario : usuarios) {
+				//		System.out.println(usuario.getNome());	
+				//	}
 									
 					i++;
 					//realizarCadastro();
@@ -51,9 +59,9 @@ public class Executavel {
 					//u1.agendarVacinacao();
 					break;
 				case 3:
-					for (Usuario usuario : usuarios) {
-						System.out.println(usuario.getNome());
-					}
+					//for (Usuario usuario : usuarios) {
+				//		System.out.println(usuario.getNome());
+				//	}
 					
 					break;
 				case 4:
