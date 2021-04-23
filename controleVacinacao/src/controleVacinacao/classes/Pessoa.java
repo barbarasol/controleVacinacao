@@ -1,50 +1,29 @@
 package controleVacinacao.classes;
 
-public class Pessoa {
-	private String nome;
-	private String cpf;
-	private String rg;
-	private String endereco;
-	private String telefone;
-	private int idade;
-	
-	
-	public String getNome() {
+public abstract class Pessoa {
+	protected static String nome;
+	protected static String cpf;
+	protected static String rg;
+	public static String getNome() {
 		return nome;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public static void setNome(String nome) {
+		Pessoa.nome = nome;
 	}
-	public String getCpf() {
+	public static String getCpf() {
 		return cpf;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public static void setCpf(String cpf) {
+		Pessoa.cpf = cpf;
 	}
-	public String getRg() {
+	public static String getRg() {
 		return rg;
 	}
-	public void setRg(String rg) {
-		this.rg = rg;
+	public static void setRg(String rg) {
+		Pessoa.rg = rg;
 	}
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-	public int getIdade() {
-		return idade;
-	}
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
+	
+	
 	
 	
 }

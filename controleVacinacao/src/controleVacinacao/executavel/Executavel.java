@@ -1,8 +1,11 @@
 package controleVacinacao.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import controleVacinacao.classes.Usuario;
+import primeiroPrograma.classes.Aluno;
 
 //import javax.swing.JOptionPane;
 
@@ -11,7 +14,7 @@ public class Executavel {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		Usuario u1 = new Usuario();
+		
 		
 		do {
 			System.out.println("Escolha uma opção:");
@@ -22,7 +25,9 @@ public class Executavel {
 			int op = scan.nextInt();
 			switch(op) {
 				case 1:
-					u1.realizarCadastro();
+					List<Usuario> usuario = new ArrayList<Usuario>();
+					
+					realizarCadastro();
 					break;
 				case 2:
 					//u1.agendarVacinacao();

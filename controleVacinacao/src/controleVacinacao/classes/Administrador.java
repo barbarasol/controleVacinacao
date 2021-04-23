@@ -3,6 +3,7 @@ package controleVacinacao.classes;
 public class Administrador extends Pessoa{
 	private String matricula;
 	private String senha;
+	private String posto; 
 	public String getMatricula() {
 		return matricula;
 	}
@@ -14,6 +15,12 @@ public class Administrador extends Pessoa{
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public String getPosto() {
+		return posto;
+	}
+	public void setPosto(String posto) {
+		this.posto = posto;
 	}
 	
 }
