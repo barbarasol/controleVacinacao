@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import controleVacinacao.classes.Usuario;
-import primeiroPrograma.classes.Aluno;
+//import primeiroPrograma.classes.Aluno;
 
 //import javax.swing.JOptionPane;
 
@@ -27,7 +27,7 @@ public class Executavel {
 				case 1:
 					List<Usuario> usuario = new ArrayList<Usuario>();
 					
-					realizarCadastro();
+					//realizarCadastro();
 					break;
 				case 2:
 					//u1.agendarVacinacao();
